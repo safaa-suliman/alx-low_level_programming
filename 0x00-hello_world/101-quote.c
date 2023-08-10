@@ -1,9 +1,11 @@
 #include<unistd.h>
-/*
- * print in stderror instead of output
-*/
-int main()
+#include<stdio.h>
+/**
+ * main - print string
+ * Return: 0 (success)
+ */
+int main(void)
 {
-	write(STDERR_FILENO, "and that piece of art is useful'"'" - Dora Korpar, 2015-10-19",59);
-	return 1;
+	 fputs("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", stderr);
+	return (1);
 }
