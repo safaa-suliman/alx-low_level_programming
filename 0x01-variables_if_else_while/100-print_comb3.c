@@ -14,8 +14,11 @@ for (num = 0; num < 10; num++)
 	{
 		putchar(num + '0');
 		putchar(hund + '0');
-		putchar(',');
-		putchar(' ');
+		if (num != 8 || hund != 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 }
 putchar('\n');

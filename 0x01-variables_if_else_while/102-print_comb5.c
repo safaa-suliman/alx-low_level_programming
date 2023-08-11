@@ -20,7 +20,8 @@ for (num = 0; num < 10; num++)
 			putchar(' ');
 			putchar(hund + '0');
 			putchar(dec + '0');
-			putchar(',');
+			if (num != 9 || hund != 8 || dec != 9)
+				putchar(',');
 		}
 	}
 }
