@@ -1,30 +1,39 @@
 #include <stdio.h>
+
 /**
- * main - print combination of two digits of base 10
- * Return: 0 (scuccess)
+ * main - print all possible combinations of two two-digit numbers
+ * Return: 0 (success)
  */
 int main(void)
 {
-int num;
-int hund;
-int dec;
-for (num = 0; num < 10; num++)
+int num1;
+int num2;
+int comma = 0;
+
+for (num1 = 0; num1 < 100; num1++)
 {
-	for (hund = 0; hund < 10; hund++)
+	for (num2 = 0; num2 < 100; num2++)
 	{
-		dec = hund + 1;
-		for (; dec < 10; dec++)
+		if (num1 < num2)
 		{
-			putchar(num + '0');
-			putchar(hund + '0');
-			putchar(' ');
-			putchar(hund + '0');
-			putchar(dec + '0');
-			if (num != 9 || hund != 8 || dec != 9)
+			if (comma)
+			{
 				putchar(',');
+				putchar(' ');
+			}
+			else
+			{
+				comma = 1;
+			}
+			putchar((num1 / 10) + '0');
+			putchar((num1 % 10) + '0');
+			putchar(' ');
+			putchar((num2 / 10) + '0');
+			putchar((num2 % 10) + '0');
 		}
 	}
 }
 putchar('\n');
 return (0);
 }
+
