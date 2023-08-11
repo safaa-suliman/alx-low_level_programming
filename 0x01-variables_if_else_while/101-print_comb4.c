@@ -10,17 +10,17 @@ int hund;
 int dec;
 for (num = 0; num < 10; num++)
 {
-	for (hund = 0; hund < 10; hund++)
+	hund = num + 1;
+	for (; hund < 10; hund++)
 	{
 		dec = hund + 1;
 		for (; dec < 10; dec++)
 		{
 			putchar(num + '0');
 			putchar(hund + '0');
-			putchar(' ');
-			putchar(hund + '0');
 			putchar(dec + '0');
 			putchar(',');
+			putchar(' ');
 		}
 	}
 }

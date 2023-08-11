@@ -7,12 +7,12 @@ int main(void)
 {
 char letter = 'A';
 char ch = 'a';
-while (ch < 'z')
+while (ch <= 'z')
 {
 	putchar(ch);
 	ch++;
 }
-while (letter < 'Z')
+while (letter <= 'Z')
 {
 	putchar(letter);
 	letter++;
