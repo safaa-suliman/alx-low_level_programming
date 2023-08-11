@@ -22,3 +22,4 @@ else
                 if (digit < 6)
                         printf("and is less than 6 and not 0");
 return (0);
+}
