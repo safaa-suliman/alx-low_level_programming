@@ -1,8 +1,8 @@
 #include<stdio.h>
 /**
-* main - print string
-* Return:0(success)
-*/ 
+ * main - print string
+ * Return: 0 (success)
+ */
 int main(void)
 {
 printf("with proper grammar, but the outcome is a piece of art,\n");
