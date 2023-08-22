@@ -2,20 +2,23 @@
 /**
 * puts_half - prints second half of string
 * @str: string to be used
-*/
+i*/
 void puts_half(char *str)
 {
-int len;
-int half;
-int i;
+int a, n, longi;
 
-len = 0;
-while (str[len] != '\0')
-{
-len++;
-}
-half = len / 2;
-for (i = half ; i < len; i++)
-_putchar(str[i]);
-_putchar('\n');
+	longi = 0;
+
+	for (a = 0; str[a] != '\0'; a++)
+		longi++;
+
+	n = (longi / 2);
+
+	if ((longi % 2) == 1)
+		n = ((longi + 1) / 2);
+
+	for (a = n; str[a] != '\0'; a++)
+		_putchar(str[a]);
+	_putchar('\n');
+
 }
