@@ -9,10 +9,9 @@ char *rot13(char *s)
 int i;
 for (i = 0; s[i] != '\0'; i++)
 {
+char base = (s[i] >= 'a' && s[i] <= 'z') ? 'a' : 'A';
 if (s[i] >= 'a' && s[i] <= 'z')
-s[i] = 'a' + (s[i] - 'a' + 13) % 26;
-else
-s[i] = 'A' + (s[i] - 'A' + 13) % 26;
+s[i] = base + (s[i] - 'a' + 13) % 26;
 }
 return (s);
 }
