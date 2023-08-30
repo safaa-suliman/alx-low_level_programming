@@ -4,7 +4,7 @@ int check_prime(int n, int divisor);
 /**
 * is_prime_number - test prime numbers
 * @n: number to test
-* REturn: 1(prime) 0 (other)
+* Return: 1(prime) 0 (other)
 */
 int is_prime_number(int n)
 {
@@ -25,13 +25,16 @@ int is_prime_number(int n)
 
 int check_prime(int n, int div)
 {
+	int check;
+
 	if (div * div > n)
-		return (1);
+		check = 1;
 	else
 	{
 	if (n % div == 0)
-		return (0);
+		check = 0;
 	else
-		return (check_prime(n, div + 1));
+		check = check_prime(n, div + 1);
 	}
+return (check);
 }
